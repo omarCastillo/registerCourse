@@ -16,5 +16,11 @@
         <input type="hidden" value="1" name="action">
         <input type="submit" value="Registrar">
     </form>
+    <br>
+    <form action="service/actions.php" method="post">
+        <input type="text" placeholder="codigo" name="code">
+        <input type="hidden" value="2" name="action">
+        <input type="submit" value="Registrar">
+    </form>
 </body>
 </html>

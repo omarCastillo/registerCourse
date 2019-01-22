@@ -13,6 +13,11 @@ switch ($action){
 
         registerToCourse($name_first, $name_last, $email, $course);
         break;
+    case 2:
+        $code = $_POST["code"];
+        
+        registerAssitence($code);
+        break;
 }
 
 ?>
