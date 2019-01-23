@@ -128,9 +128,9 @@ function sendEmail($email, $name_first)
     
     
     if (!$mail1->Send()) {
-        echo "Hubo un problema al registrar tu reporte, por favor intentalo mas tarde";
+        echo "500";
     } else {
-        echo "Pronto se atendera tu problema";
+        echo "200";
     }
 }
 
