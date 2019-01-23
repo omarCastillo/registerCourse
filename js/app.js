@@ -15,8 +15,10 @@ function registerCourse() {
         success: function (data) {
             if (data == 200) {
                 $(".containerForm").css("display", "none");
-            } else {
                 $(".containerSucces").css("display", "block");
+            } else {
+                $(".containerForm").css("display", "none");
+                $(".containerError").css("display", "block");
             }
         }
     });

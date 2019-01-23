@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <h1>Formulario de registro al curso HTML / CSS</h1>
-                <p>Registrate a este curso y aprender mas sobre los principios de HTML y CSS para comenzar a armar tu
+                <p>Registrate a este curso y aprender mas sobre los principios de HTML y CSS para comenzará a armar tu
                     futuro personal y profecional.</p>
                 <div class="form">
                     <input id="course" type="hidden" value="1" name="course">
@@ -51,6 +51,13 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <h3>!Felicidades! Ya estas inscrito en el curso, te enviaremos un email con la información.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center containerError" style="display: none;">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h3>¡Ups! parace que hubo un error, por favor intentalo mas tarde.</h3>
                 </div>
             </div>
         </div>

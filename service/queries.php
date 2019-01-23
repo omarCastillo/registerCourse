@@ -114,16 +114,16 @@ function sendEmail($email, $name_first)
     $mail1->Host     = 'smtp.gmail.com'; // <---- Servidor proveedor del servicio de emails
     $mail1->SMTPAuth = true;
     
-    $mail1->Username   = 'omarc@goigni.com'; // <---- Email del cliente
-    $mail1->Password   = 'omarcastillo1994'; // <---- Contraseña del email del cliente
+    $mail1->Username   = 'xxxxxxxx@gmail.com'; // <---- Email del cliente
+    $mail1->Password   = 'xxxxxx'; // <---- Contraseña del email del cliente
     $mail1->Port       = 587; // <---- Puerto del servidor del servicio de emails
     $mail1->SMTPSecure = 'tls'; // <---- Tipo de seguridad
-    $mail1->From       = 'omarc@goigni.com'; // <---- Email del cliente
-    $mail1->FromName   = 'Igni - Email Cleaner'; // <---- Cambiar el nombre del cliente
+    $mail1->From       = 'xxxxxxxx@gmail.com'; // <---- Email del cliente
+    $mail1->FromName   = 'Login - Cloud'; // <---- Cambiar el nombre del cliente
     $mail1->addAddress($email);
     $mail1->isHTML(true);
     $mail1->CharSet = 'UTF-8';
-    $mail1->Subject = 'Reporte de error recibido';
+    $mail1->Subject = 'Confirmación de registro';
     $mail1->Body    = $template1;
     
     
