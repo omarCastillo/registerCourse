@@ -1,20 +1,42 @@
+:root{
+    --blue: #007bff61;
+    --gray: #cfcfcf;
+}
+header{
+    margin-bottom: 50px;
+}
+footer{
+    margin-top: 50px;
+    background-color: var(--gray);
+    padding: 15px 0;
+}
+footer h5{
+    margin: 0;
+}
 h1{
     font-size: 27px;
-    text-align: center;
     padding-bottom: 15px;
 }
 p{
-    text-align: center;
     padding-bottom: 15px;
-}
-.containerForm{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin: 0;
 }
 .form{
     padding: 20px;
-    background: #007bff61;
+    background: var(--blue);
     border-radius: 40px 0 40px 0;
+}
+input{
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid #757575 !important;
+    border-radius: 0 !important;
+}
+table, th, td{
+    border: 1px solid var(--blue) !important;
+}
+th, td{
+    padding: 5px 15px;
 }
 footer {
     text-align: center;

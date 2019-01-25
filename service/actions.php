@@ -18,6 +18,15 @@ switch ($action){
         
         registerAssitence($code);
         break;
+    case 3:
+        
+        selectContacts($code);
+        break;
+    case 4:
+        $id = $_POST["id"];
+        $status = $_POST["status"];
+        changeStatus($id, $status);
+        break;
 }
 
 ?>

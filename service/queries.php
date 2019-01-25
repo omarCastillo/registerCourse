@@ -68,13 +68,45 @@ function registerAssitence($code)
     }
     
     if ($statusCode) {
-        $updateStatusAssitence = "UPDATE `REGISTERS_COURSE` SET `status` = '2' WHERE `code` = '$code'";
+        $updateStatusAssitence = "UPDATE `REGISTERS_COURSE` SET `assistence` = '2' WHERE `code` = '$code'";
         $resultadoUpdate = mysqli_query($conexion, $updateStatusAssitence) or die("Algo ha ido mal en la consulta a la base de datos consulta email");
         
         if ($resultadoUpdate) {
             echo "se actualizo exitosamente";
         } else {
             echo "no se actualizo";
+        }
+    } else {
+        echo "Este codigo no existe.";
+    }
+}
+function changeStatus($id, $status)
+{
+    
+    $usuario     = "root";
+    $contrasena  = "root";
+    $servidor    = "localhost";
+    $basededatos = "logincloud";
+    $conexion = mysqli_connect($servidor, $usuario, $contrasena) or die("No se ha podido conectar al servidor de Base de datos");
+    $db = mysqli_select_db($conexion, $basededatos) or die("Upps! Pues va a ser que no se ha podido conectar a la base de datos");
+    
+    $ChangeStatus = "SELECT * FROM `REGISTERS_COURSE` WHERE `id` = '" . $id . "'";
+    $resultadoChangeStatus = mysqli_query($conexion, $ChangeStatus) or die("Algo ha ido mal en la consulta a la base de datos consulta email");
+    
+    while ($columnaChangeStatus = mysqli_fetch_array($resultadoChangeStatus)) {
+        $statusConsulta = $columnaChangeStatus[id];
+    }
+    
+    if ($statusConsulta) {
+        $updateStatus = "UPDATE `REGISTERS_COURSE` SET `status` = '$status' WHERE `id` = '$id'";
+        echo $updateStatus;
+
+        $resultadoUpdate = mysqli_query($conexion, $updateStatus) or die("Algo ha ido mal en la consulta a la base de datos consulta email");
+        
+        if ($resultadoUpdate) {
+            echo "200";
+        } else {
+            echo "500";
         }
     } else {
         echo "Este codigo no existe.";
@@ -93,7 +125,33 @@ function selectContacts()
     $consultaRegisters = "SELECT * FROM `REGISTERS_COURSE`";
     $resultadoConsultaRegisters = mysqli_query($conexion, $consultaRegisters) or die("Algo ha ido mal en la consulta a la base de datos consulta email");
     
-    print_r($resultadoConsultaRegisters);
+
+    echo "<table>
+            <tr>
+                <th>Nombre</th>
+                <th>email</th>
+                <th>Status</th>
+                <th>Cambiar Status</th>
+            </tr>";
+    // output data of each row
+    while($row = $resultadoConsultaRegisters->fetch_assoc()) {
+        if($row["status"] == 1){
+            $bg = "red";
+            $changeStatus = 0;
+        }
+        else{
+            $bg = "green";
+            $changeStatus = 1;
+        }
+
+        echo "<tr>
+                <td>" . $row["name_first"]. "</td>
+                <td>" . $row["email"]. "</td>
+                <td id='ST".$row["id"]."' style='background-color:" . $bg . "'>" . $row["status"]. "</td>
+                <td><button onclick='changeStatus(".$row["id"].",".$changeStatus.")'>Cambiar</button></td>
+            </tr>";
+    }
+    echo "</table>";
 }
 
 function sendEmail($email, $name_first)
