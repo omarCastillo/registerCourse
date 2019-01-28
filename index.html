@@ -25,10 +25,10 @@
     </header>
     <div id="formulario" class="container containerForm">
         <div class="row">
-            <div class="col-md-6 offset-md-3 text-center">
+            <div class="col-md-8 offset-md-2 text-center">
                 <h1>Formulario de registro al curso HTML / CSS</h1>
-                <p>Registrate a este curso y aprender mas sobre los principios de HTML y CSS para comenzará a armar tu
-                    futuro personal y profecional.</p>
+                <p>Con este curso podrás aprender o retomar de una forma mas fácil y mas completa el front end.
+                    Nuestro mentor cuenta con una gran experiencia en desarrollo Web, así podrás ser capaz de tener mejores habilidades en diseño web.</p>
                 <div class="form">
                     <input id="course" type="hidden" value="1" name="course">
                     <input id="action" type="hidden" value="1" name="action">
@@ -45,26 +45,33 @@
                 </div>
             </div>
         </div>
-        <div class="container text-center containerSucces" style="display: none;">
+        <div class="container text-center containerAlert none">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 message">
+                        <h3>Por favor llena todos los campos.</h3>
+                    </div>
+                </div>
+            </div>
+        <div class="container text-center containerSucces none">
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-8 offset-md-2">
                     <h3>!Felicidades! Ya estas inscrito en el curso, te enviaremos un email con la información.</h3>
                 </div>
             </div>
         </div>
         <div class="container text-center containerError" style="display: none;">
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-md-8 offset-md-2">
                     <h3>¡Ups! parace que hubo un error, por favor intentalo mas tarde.</h3>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container containerTemario">
         <div class="row">
-            <div class="col-md-6 offset-md-4 text-center">
+            <div class="col-md-8 offset-md-2 text-center">
                 <h2>Temario</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda nam, mollitia inventore, facilis hic atque saepe deleniti magnam ab quisquam in consequuntur! Magnam harum ipsam odit maiores provident? Aliquid!</p>
+                <p>Este será el temario del curso, a lo largo de las clases estos serán los temas que iremos viendo a detalle para contruir tu conocimiento y puedas armar tu propio proyecto.</p>
                 <p class="text-left">Nombre del modulo</p>
                 <ul class="text-left">
                     <li>1.* xxxxxx</li>
@@ -88,10 +95,21 @@
             </div>
         </div>
     </div>
+    <div class="container containerTemario">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <img src="img/omar.png" width="150">
+                <h2>Mentor</h2>
+                <p>Nuestro mentor para este curso es el Ing. Omar Castillo Rosales, quien es programador Full stack y cuenta con experiencia en el desarrollo web utilizando diversas herramientas
+                entre ellas Bootstrap, herramienta la cual nos ayudará a aprender.
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-4 text-center">
-                <a href="#formulario"><button>Registrarme</button></a>
+            <div class="col-md-8 offset-md-2 text-center">
+                <a href="#formulario"><button class="btn btn-primary">Registrarme</button></a>
             </div>
         </div>
     </div>
@@ -99,7 +117,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <img src="img/logo.png" width="100" alt="">
+                    <img src="img/logo.png" width="100" alt="Omar">
                     <h5>Powered by Login-Cloud</h5>
                 </div>
             </div>
